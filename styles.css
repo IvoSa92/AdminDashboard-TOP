@@ -17,8 +17,6 @@ padding: 0;
   display: grid;
 }
 
-/*FIRST SECTION*/
-
 .first-section {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr 1fr 2fr;
@@ -28,7 +26,7 @@ padding: 0;
 }
 
 .first-section button {
-  background-image: url(./icons8-search.gif);
+  background-image: url(./Icons/icons8-suche-100.png);
   width: 2rem;
   height: 2rem;
   background-size: 2rem;
@@ -76,6 +74,11 @@ padding: 0;
   margin: 0;
 }
 
+.logo-big,
+.logo-small {
+  margin: 1rem;
+}
+
 .header-btn {
   width: 5rem;
   height: 2rem;
@@ -91,12 +94,46 @@ padding: 0;
 
 .sidebar {
   grid-row: 1/5;
-  background-color: coral;
+  background-color: #ffcab0;
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr 3fr;
+  font-family: monospace;
+  align-items: center;
+  justify-content: center;
 }
 
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+}
+.dashboard-header img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.ul-1,
+.ul-2 {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+li img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
 /*MAIN CONTENT*/
 
 .main-content {
   grid-row: 2/5;
-  background-color: darkcyan;
+  background-color: #ffebbb;
 }
