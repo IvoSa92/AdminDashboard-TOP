@@ -76,7 +76,7 @@ body {
 .second-section {
   display: grid;
   align-items: center;
-  grid-template-columns: 5fr 1fr 1fr 1fr;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
   font-family: monospace;
 }
 
@@ -101,6 +101,7 @@ body {
 .logo-big,
 .logo-small {
   margin: 1rem;
+  margin-left: 1rem;
 }
 
 .header-btn {
@@ -113,6 +114,7 @@ body {
   background-color: #7eb5a6;
   color: white;
   cursor: pointer;
+  margin-left: 1.5rem;
 }
 
 .header-btn:hover {
@@ -228,6 +230,7 @@ li img {
 
 .main-grid-item {
   background-color: #f5f5f5;
+  padding: 1rem;
   color: #333333;
   border-radius: 10px;
   border-left: solid 8px #ffcab0;
@@ -235,6 +238,16 @@ li img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+.item-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.item-buttons button {
+  width: 2rem;
+  height: 1.5rem;
+}
 /*RIGHT SIDE*/
 
 .right-content {
