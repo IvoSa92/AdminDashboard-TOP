@@ -229,12 +229,16 @@ li img {
 }
 
 .main-grid-item {
-  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #efefef;
   padding: 1rem;
   color: #333333;
   border-radius: 10px;
   border-left: solid 8px #ffcab0;
   margin: 1rem;
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -244,10 +248,49 @@ li img {
   justify-content: flex-end;
 }
 
+.like:hover,
+.bookmark:hover,
+.share:hover {
+  transform: scale(1.1);
+}
+
+.like:active,
+.bookmark:active,
+.share:active {
+  transform: scale(0.98);
+}
+
 .item-buttons button {
   width: 2rem;
   height: 1.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
+
+.like {
+  background-image: url(.//Icons/icons8-mag-ich-100.png);
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+}
+
+.bookmark {
+  background-image: url(./Icons/icons8-lesezeichen-100.png);
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+}
+
+.share {
+  background-image: url(./Icons/icons8-teilen-100.png);
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+}
+
 /*RIGHT SIDE*/
 
 .right-content {
@@ -315,4 +358,48 @@ li img {
   font-family: monospace, sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   text-decoration: underline;
+}
+
+/*FOR SMALLER SCREENS*/
+
+@media (max-width: 786px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .first-section {
+    display: flex;
+  }
+  .second-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .second-section button {
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+  .dashboard-header {
+    margin-left: 2rem;
+  }
+  .sidebar li {
+    margin-left: 2rem;
+    padding: 1rem;
+  }
+  .sidebar ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-header {
+    margin-right: 1.5rem;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
 }
